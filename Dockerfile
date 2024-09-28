@@ -7,7 +7,7 @@ RUN apk add --update \
         coreutils \
         py-pip
 
-RUN pip install awscli
+RUN apk add awscli
 
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
