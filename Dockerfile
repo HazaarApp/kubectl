@@ -7,7 +7,7 @@ RUN apk add --update \
         coreutils \
         py-pip
 
-RUN apk add awscli
+RUN apk add --no-cache aws-cli
 
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
